@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://buddysnft.github.io/pushcheck.github.io/sitemap.xml
