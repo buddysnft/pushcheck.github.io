@@ -3,12 +3,14 @@
 :root {
     --primary: #7FFF00;
     --primary-dark: #6BE000;
+    --accent-yellow: #FFD700;
     --text-dark: #ffffff;
-    --text-light: #a0a0a0;
-    --bg-light: #252d3f;
-    --bg-white: #1d2433;
-    --bg-dark: #151a26;
-    --border: #2a3346;
+    --text-light: #8a8a8a;
+    --bg-light: #1a1a1a;
+    --bg-white: #0f0f0f;
+    --bg-dark: #000000;
+    --card-bg: #1e1e1e;
+    --border: #2a2a2a;
 }
 
 * {
@@ -107,10 +109,11 @@ nav {
 
 .hero h1 {
     font-size: 56px;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.1;
     margin-bottom: 20px;
     color: var(--text-dark);
+    letter-spacing: -0.02em;
 }
 
 .subtitle {
@@ -155,6 +158,7 @@ nav {
     font-size: 42px;
     font-weight: 700;
     margin-bottom: 60px;
+    color: var(--text-dark);
 }
 
 .feature-grid {
@@ -165,6 +169,10 @@ nav {
 
 .feature {
     text-align: center;
+    background: var(--card-bg);
+    padding: 30px 20px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
 }
 
 .feature-icon {
@@ -176,6 +184,7 @@ nav {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 12px;
+    color: var(--text-dark);
 }
 
 .feature p {
@@ -210,12 +219,13 @@ nav {
     display: inline-block;
     width: 60px;
     height: 60px;
-    background: var(--primary);
-    color: white;
+    background: var(--card-bg);
+    color: var(--primary);
+    border: 3px solid var(--primary);
     border-radius: 50%;
     font-size: 28px;
     font-weight: 700;
-    line-height: 60px;
+    line-height: 54px;
     margin-bottom: 20px;
 }
 
