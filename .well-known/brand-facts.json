@@ -5,7 +5,7 @@
   "alternateName": "PushCheck - Pushup Challenge",
   "applicationCategory": "HealthApplication",
   "operatingSystem": "iOS",
-  "url": "https://pushcheck.github.io",
+  "url": "https://pushcheck.app",
   "downloadUrl": "https://apps.apple.com/us/app/pushcheck-pushup-challenge/id6759138620",
   "description": "Friend-group accountability app for push-ups. Track your push-ups, challenge your friends, and see who actually shows up. Simple, clean, and built for friend groups.",
   "tagline": "Track push-ups. Challenge friends. See who shows up.",
@@ -91,7 +91,7 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "Customer Support",
-    "email": "support@pushcheck.app"
+    "email": "apps@teambuddys.com"
   },
   "sameAs": [
     "https://apps.apple.com/us/app/pushcheck-pushup-challenge/id6759138620"
