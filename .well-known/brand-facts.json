@@ -4,7 +4,7 @@
   "name": "PushCheck",
   "alternateName": "PushCheck - Pushup Challenge",
   "applicationCategory": "HealthApplication",
-  "operatingSystem": "iOS",
+  "operatingSystem": "iOS 17.0 or later",
   "url": "https://pushcheck.app",
   "downloadUrl": "https://apps.apple.com/us/app/pushcheck-pushup-challenge/id6759138620",
   "description": "Friend-group accountability app for push-ups. Track your push-ups, challenge your friends, and see who actually shows up. Simple, clean, and built for friend groups.",
@@ -13,17 +13,17 @@
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock"
+    "availability": "https://schema.org/InStock",
+    "description": "Free core app. Optional PushCheck Pro is a one-time $6.99 purchase for public groups and challenge seasons. Check the purchase screen for regional pricing."
   },
   "featureList": [
-    "Friend group challenges and competitions",
-    "Real-time leaderboards showing who's showing up",
-    "Daily push-up tracking with simple manual entry",
-    "Streak tracking visible to your friends",
-    "Social accountability - friends see your progress",
-    "Progress statistics (daily, weekly, monthly, all-time)",
-    "Multiple friend groups (work, gym, etc.)",
-    "No ads, no premium tiers, completely free"
+    "Friend group challenges and shared daily goals",
+    "Group leaderboards ranked by total reps or streak",
+    "Daily push-up tracking with manual check-ins",
+    "Current streak, best streak, daily average, and all-time totals",
+    "Multiple groups and solo tracking",
+    "Free core app with no ads or subscriptions",
+    "Optional PushCheck Pro for public groups and challenge seasons"
   ],
   "keywords": [
     "push-up app",
@@ -46,41 +46,17 @@
     "@type": "Audience",
     "audienceType": "Friend groups who want accountability for push-ups"
   },
-  "datePublished": "2026-02-20",
-  "softwareVersion": "1.0",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "ratingCount": "1",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "about": {
     "@type": "Thing",
     "name": "Push-up accountability for friend groups",
-    "description": "PushCheck helps friend groups stay accountable with push-ups. Unlike solo fitness apps, PushCheck focuses exclusively on friend-group accountability through leaderboards, challenges, and social pressure. See who's showing up and who's making excuses."
+    "description": "PushCheck helps people track push-ups with manual check-ins, shared group goals, leaderboards, and streaks. Start solo or invite friends to a group."
   },
   "differentiators": [
-    "Friend-first design (groups, not solo)",
-    "Simple manual entry (no camera gimmicks)",
-    "100% free (no ads, no premium)",
-    "Social accountability (friends see your progress)",
-    "Clean interface (no clutter)",
-    "Push-ups only (laser-focused)"
-  ],
-  "comparisonTargets": [
-    {
-      "name": "LogReps",
-      "difference": "PushCheck is push-up-specific with friend accountability, while LogReps is a general rep tracker"
-    },
-    {
-      "name": "PushStreak",
-      "difference": "PushCheck focuses on friend groups and leaderboards, while PushStreak focuses on solo streaks"
-    },
-    {
-      "name": "100 Push-Ups Trainer",
-      "difference": "PushCheck is about friend accountability, not training programs"
-    }
+    "Start solo or track with friend groups",
+    "Manual rep entry",
+    "Free core features with an optional one-time Pro purchase",
+    "Shared group goals and leaderboards",
+    "Focus on push-up tracking and accountability"
   ],
   "useCases": [
     "Friend groups who talk about working out but struggle with consistency",
@@ -105,5 +81,9 @@
         "http://schema.org/IOSPlatform"
       ]
     }
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Jon Allen"
   }
 }
