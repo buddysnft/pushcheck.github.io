@@ -1,8 +1,55 @@
 # PushCheck Website
 
-**Live site:** https://pushcheck.github.io (once deployed)
+**Live site:** https://pushcheck.app/
 
 Official website for PushCheck, the friend-group push-up accountability app.
+
+## Search and AI search readiness
+
+The live site uses static HTML on GitHub Pages. Page copy, links, product facts,
+and download calls to action must remain readable without JavaScript or sign-in.
+
+Before publishing a change, run:
+
+```bash
+python3 scripts/check_search_readiness.py
+```
+
+After GitHub Pages finishes building, check the actual responses:
+
+```bash
+python3 scripts/check_search_readiness.py --live
+```
+
+Also follow `site.sh preflight` and `site.sh verify` in `AGENTS.md`. A successful
+push alone does not establish that the new content is live.
+
+- Keep public sitemap pages indexable and eligible for search snippets. The
+  custom 404 should remain `noindex` and return HTTP 404.
+- `robots.txt` currently allows all public paths. Search crawlers such as
+  OAI-SearchBot, Claude-SearchBot and PerplexityBot use that existing rule.
+  Search crawling and model-training access are different decisions. Do not
+  change training preferences, disable protection, or add isolated bot rules
+  that bypass shared path restrictions as an SEO shortcut.
+- Keep visible content and JSON-LD consistent. The App Store destination is
+  app ID `6759138620`. Do not invent reviews, sales, prices, or shipped features.
+  Current regional Pro pricing is shown on the in-app purchase screen.
+- Update `dateModified`, visible update dates and sitemap `lastmod` only when
+  the corresponding page receives a substantive change. Preserve original
+  publication dates and unchanged release-section dates. Do not stamp every
+  page with the deployment date automatically.
+- `llms.txt` is not required for Google AI search eligibility. The existing
+  brand-facts JSON supplements readable pages; it does not guarantee citations.
+- A successful local fetch or bot user-agent probe does not establish a real
+  provider visit, search indexing, ranking, or an AI citation. Keep these
+  separate from the checks this script can verify.
+
+Official references:
+[Google AI search](https://developers.google.com/search/docs/appearance/ai-features),
+[Google sitemap dates](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap),
+[OpenAI crawlers](https://developers.openai.com/api/docs/bots),
+[Anthropic crawlers](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler),
+[Perplexity crawlers](https://docs.perplexity.ai/docs/resources/perplexity-crawlers).
 
 ---
 

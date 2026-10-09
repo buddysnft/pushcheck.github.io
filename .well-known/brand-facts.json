@@ -14,7 +14,7 @@
     "price": "0",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
-    "description": "Free core app. Optional PushCheck Pro is a one-time $6.99 purchase for public groups and challenge seasons. Check the purchase screen for regional pricing."
+    "description": "Free core app. Optional PushCheck Pro is a one-time purchase for public groups and challenge seasons. Check the in-app purchase screen for the current price in your region."
   },
   "featureList": [
     "Friend group challenges and shared daily goals",
@@ -85,5 +85,6 @@
   "creator": {
     "@type": "Person",
     "name": "Jon Allen"
-  }
+  },
+  "dateModified": "2026-10-08"
 }

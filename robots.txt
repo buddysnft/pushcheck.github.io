@@ -1,3 +1,9 @@
+# Public marketing pages are available without JavaScript or sign-in.
+# This shared rule permits search crawlers including Googlebot, Bingbot,
+# OAI-SearchBot, Claude-SearchBot and PerplexityBot.
+# Search access and model-training preferences are separate decisions.
+# Preserve this site's existing general crawler policy; avoid isolated
+# bot groups that would bypass shared path restrictions added in the future.
 User-agent: *
 Allow: /
 
