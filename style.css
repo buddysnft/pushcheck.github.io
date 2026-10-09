@@ -69,7 +69,7 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--primary); outl
 .manifesto-strip { display: flex; justify-content: center; align-items: center; gap: 50px; background: var(--primary); color: var(--bg-dark); padding: 22px; font: 800 28px/1 var(--display); text-transform: uppercase; letter-spacing: .02em; }
 .manifesto-strip span[aria-hidden] { font: 22px/1 Arial, sans-serif; }
 /* The actual product */
-.product-section { background: var(--text-dark); color: var(--bg-dark); }
+.product-section { background: var(--primary); color: var(--bg-dark); }
 .product-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 100px; align-items: center; }
 .product-copy .section-lead { max-width: 39ch; }
 .product-points { margin: 32px 0 24px; }
@@ -92,7 +92,7 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--primary); outl
 /* The crew */
 .crew-section { display: grid; grid-template-columns: 1fr 1fr; background: var(--bg-dark); }
 .crew-photo { min-width: 0; }
-.crew-photo img { width: 100%; height: 100%; object-fit: cover; object-position: right center; }
+.crew-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .crew-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 80px clamp(32px, 6vw, 100px); }
 .crew-copy .display-title { font-size: clamp(66px, 6.5vw, 100px); }
 .crew-copy h2 span { color: var(--primary); }

@@ -1,15 +1,17 @@
 {
   "created": "2026-10-08",
   "photography": {
-    "pushcheck-training-hero.webp": {
-      "source": "Built-in image generation",
-      "original": "exec-fc9a1f28-47af-4c00-a035-c0081dd74380.png",
-      "description": "Original AI-generated sports editorial for PushCheck: two adult training partners, studio push-up, dark left space for headline. No logos or text."
+    "pushcheck-green-studio.webp": {
+      "source": "Higgsfield gpt_image_2_5",
+      "job_id": "d9ee6d4d-8684-49e2-b1f2-7b39e6bcbf7e",
+      "original": "https://d8j0ntlcm91z4.cloudfront.net/user_3DgVVog5b1cIorYJXzIGLch2OdV/hf_20261009_015741_d9ee6d4d-8684-49e2-b1f2-7b39e6bcbf7e.png",
+      "description": "Original generated empty training studio with lime-green floor and wall, natural light and a black mat. No people. Not an actual PushCheck-owned facility."
     },
-    "pushcheck-training-partners.webp": {
-      "source": "Built-in image generation edit of existing PushCheck asset PC_PHOTO_DIVERSE_021_V1.png",
-      "original": "exec-4bb88ee1-eea5-4295-9b84-cfde9ec89c89.png",
-      "description": "Original generated two-friend outdoor push-up campaign image, edited to remove clothing and shoe logos. Not a customer testimonial."
+    "pushcheck-green-court.webp": {
+      "source": "Higgsfield gpt_image_2_5",
+      "job_id": "c2026ddc-4d66-40c5-9502-b980ad484458",
+      "original": "https://d8j0ntlcm91z4.cloudfront.net/user_3DgVVog5b1cIorYJXzIGLch2OdV/hf_20261009_015755_c2026ddc-4d66-40c5-9502-b980ad484458.png",
+      "description": "Original generated empty lime-green outdoor court with white lines and concrete walls. No people. Not an actual PushCheck-owned facility."
     }
   },
   "product_image": {
@@ -27,5 +29,6 @@
     "https://www.nike.com/",
     "https://www.onepeloton.com/",
     "https://tonal.com/"
-  ]
+  ],
+  "creative_direction": "Green-dominant training locations and textures. No AI people, faces, bodies, silhouettes, or person-shaped shadows in campaign imagery."
 }
