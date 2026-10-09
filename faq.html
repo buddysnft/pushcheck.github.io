@@ -358,7 +358,7 @@
     }
     </script>
 
-    <link rel="stylesheet" href="/style.css?v=20261003">
+    <link rel="stylesheet" href="/style.css?v=20261008-redesign">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -379,12 +379,17 @@
   ]
 }
 </script>
+    <script src="/navigation.js?v=20261008" defer></script>
 </head>
 <body>
-    <nav aria-label="Main navigation">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation">
         <div class="container nav-content">
-            <div class="logo"><a href="/"><img src="/logo-80.webp" alt="" width="40" height="40" class="logo-img"><span>PushCheck</span></a></div>
-            <div class="nav-links"><a href="/faq.html">FAQ</a><a href="/blog.html">Guides</a><a href="https://apps.apple.com/us/app/pushcheck-pushup-challenge/id6759138620" class="download-btn">Download</a></div>
+            <div class="logo"><a href="/" aria-label="PushCheck home"><img src="/logo-80.webp" alt="" width="40" height="40" class="logo-img"><span>PushCheck</span></a></div>
+            <div class="nav-links"><a href="/#the-app">The app</a><a href="/#how-it-works">How it works</a><a href="/faq.html">FAQ</a></div>
+            <div class="nav-actions"><a href="https://apps.apple.com/us/app/pushcheck-pushup-challenge/id6759138620" class="download-btn">Get PushCheck <span aria-hidden="true">↗</span></a>
+                <details class="mobile-menu"><summary aria-label="Navigation menu"><span class="menu-lines" aria-hidden="true"></span></summary><div class="mobile-menu-links"><a href="/#the-app">The app</a><a href="/#how-it-works">How it works</a><a href="/faq.html">FAQ</a><a href="/blog.html">Guides</a><a href="/brand-facts.html">About</a></div></details>
+            </div>
         </div>
     </nav>
     <nav aria-label="Breadcrumb" class="breadcrumbs"><div class="container"><ol><li><a href="/">Home</a></li><li><span aria-current="page">FAQ</span></li></ol></div></nav>
@@ -637,30 +642,13 @@
     </main>
     <footer>
         <div class="container">
+            <div class="footer-top"><a class="footer-brand" href="/">PushCheck<span aria-hidden="true">↗</span></a><p>One rep. Then another.<br>Bring your friends.</p></div>
             <div class="footer-content">
-                <div class="footer-section">
-                    <h4>PushCheck</h4>
-                    <p>Track push-ups. Challenge friends. See who shows up.</p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Links</h4>
-                    <a href="/">Home</a><br>
-                    <a href="/faq.html">FAQ</a><br>
-                    <a href="/blog.html">Blog</a><br>
-                    <a href="mailto:apps@teambuddys.com">Support</a>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Download</h4>
-                    <a href="https://apps.apple.com/us/app/pushcheck-pushup-challenge/id6759138620">iOS App Store</a>
-                </div>
+                <div class="footer-section"><h4>The app</h4><a href="https://apps.apple.com/us/app/pushcheck-pushup-challenge/id6759138620">Download for iPhone ↗</a><a href="/#how-it-works">How it works</a><a href="/faq.html">Free &amp; Pro</a></div>
+                <div class="footer-section"><h4>Keep showing up</h4><a href="/blog.html">Guides</a><a href="/brand-facts.html">About PushCheck</a><a href="https://www.instagram.com/pushcheckapp/">Instagram ↗</a></div>
+                <div class="footer-section"><h4>Get in touch</h4><a href="mailto:apps@teambuddys.com">apps@teambuddys.com</a><p>Made for people who show up.</p></div>
             </div>
-
-            <div class="footer-bottom">
-                <p>Page updated <time datetime="2026-10-08">October 8, 2026</time>.</p>
-                <p>&copy; 2026 PushCheck. Made for friend groups who actually show up.</p>
-            </div>
+            <div class="footer-bottom"><p>&copy; 2026 PushCheck.</p><p>Page updated <time datetime="2026-10-08">October 8, 2026</time>.</p><a href="/faq.html">Questions? Start here ↗</a></div>
         </div>
     </footer>
 </body>

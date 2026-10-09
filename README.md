@@ -4,6 +4,17 @@
 
 Official website for PushCheck, the friend-group push-up accountability app.
 
+## Creative system
+
+The October 8, 2026 redesign uses original fitness imagery, Barlow Condensed
+display type, the existing black/white/lime palette, and a real PushCheck App
+Store preview. Asset sources and generation notes are in `assets/provenance.json`.
+The font license is `assets/Barlow-OFL.txt`. All assets are served locally.
+
+`navigation.js` only dismisses the mobile menu on link selection, outside click,
+or Escape. All content and navigation remain available without JavaScript.
+Keep the layout usable at 320px, 390px, 768px and desktop widths.
+
 ## Search and AI search readiness
 
 The live site uses static HTML on GitHub Pages. Page copy, links, product facts,

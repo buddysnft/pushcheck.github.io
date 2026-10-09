@@ -1,0 +1,31 @@
+{
+  "created": "2026-10-08",
+  "photography": {
+    "pushcheck-training-hero.webp": {
+      "source": "Built-in image generation",
+      "original": "exec-fc9a1f28-47af-4c00-a035-c0081dd74380.png",
+      "description": "Original AI-generated sports editorial for PushCheck: two adult training partners, studio push-up, dark left space for headline. No logos or text."
+    },
+    "pushcheck-training-partners.webp": {
+      "source": "Built-in image generation edit of existing PushCheck asset PC_PHOTO_DIVERSE_021_V1.png",
+      "original": "exec-4bb88ee1-eea5-4295-9b84-cfde9ec89c89.png",
+      "description": "Original generated two-friend outdoor push-up campaign image, edited to remove clothing and shoe logos. Not a customer testimonial."
+    }
+  },
+  "product_image": {
+    "file": "pushcheck-app-store.webp",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/23/51/21/2351218e-4874-5650-bbe6-c06197ef8b7a/1.png/600x1300bb.webp",
+    "description": "Unaltered public PushCheck App Store preview, app ID6759138620, retrieved2026-10-08"
+  },
+  "font": {
+    "family": "Barlow Condensed",
+    "weight": 800,
+    "license": "SIL Open Font License1.1, assets/Barlow-OFL.txt",
+    "source": "https://github.com/google/fonts/tree/main/ofl/barlowcondensed"
+  },
+  "design_references": [
+    "https://www.nike.com/",
+    "https://www.onepeloton.com/",
+    "https://tonal.com/"
+  ]
+}
