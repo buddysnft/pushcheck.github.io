@@ -248,7 +248,7 @@ class Checker:
         ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
         entries = [(n.findtext("s:loc", namespaces=ns), n.findtext("s:lastmod", namespaces=ns))
                    for n in ET.fromstring(sitemap).findall("s:url", ns)]
-        self.check(len(entries) == 6 and len({u for u, _ in entries}) == 6, "Expected six distinct sitemap pages")
+        self.check(len(entries) == 7 and len({u for u, _ in entries}) == 7, "Expected seven distinct sitemap pages")
         robots, _ = self.read("/robots.txt")
         policy = RobotFileParser()
         policy.parse(robots.splitlines())

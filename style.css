@@ -1,4 +1,4 @@
-/* PushCheck / One rep. Then another. */
+/* PushCheck / Push each other. */
 @font-face {
     font-family: 'Barlow Condensed';
     src: url('/assets/barlow-condensed-extrabold.ttf') format('truetype');
@@ -300,3 +300,36 @@ footer { padding: 65px 0 24px; background: var(--bg-dark); border-top: 1px solid
 .logo, .nav-actions { flex-shrink: 0; }
 .download-btn { white-space: nowrap; }
 .mobile-menu summary { min-width: 44px; }
+
+/* Official, attributed App Store feedback. */
+.reviews-page { padding: 48px 0 90px; }
+.reviews-intro h1 { font: 800 clamp(76px, 10vw, 148px)/.87 var(--display); letter-spacing: -.025em; text-transform: uppercase; margin: 22px 0 30px; }
+.reviews-intro h1 span { color: var(--primary); }
+.reviews-disclosure { max-width: 64ch; line-height: 1.7; }
+.reviews-disclosure strong { display: block; }
+.reviews-rating { display: flex; align-items: center; gap: 64px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 30px 0; margin-top: 36px; }
+.reviews-rating strong { display: block; color: var(--primary); font: 800 80px/1 var(--display); }
+.reviews-rating strong span { font-size: 36px; color: var(--text-light); }
+.reviews-rating-caption { display: block; margin-top: 10px; font-size: 14px; }
+.reviews-rating > p + p { font-size: 13px; line-height: 1.9; color: var(--text-light); }
+.reviews-rating a { color: var(--text-dark); }
+.reviews-feedback, .reviews-details { padding-top: 60px; }
+.reviews-page h2 { font: 800 clamp(36px, 4.6vw, 58px)/1 var(--display); text-transform: uppercase; margin-bottom: 20px; }
+.reviews-context { color: var(--text-light); max-width: 76ch; font-size: 14px; }
+.reviews-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 28px 0; }
+.review-excerpt { background: var(--bg-light); border: 1px solid var(--border); padding: 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; }
+.review-excerpt blockquote { font-size: clamp(24px, 2.8vw, 36px); line-height: 1.3; letter-spacing: -.02em; }
+.review-excerpt figcaption { display: flex; flex-direction: column; font-size: 13px; }
+.review-excerpt figcaption span { color: var(--text-light); }
+.review-excerpt figcaption a { margin-top: 12px; }
+.reviews-details > p { max-width: 70ch; margin-bottom: 20px; }
+.reviews-details .cta-button { margin: 6px 0 18px; }
+.reviews-page a { overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+    .reviews-page { padding: 32px 0 60px; }
+    .reviews-intro h1 { font-size: clamp(68px, 16vw, 110px); }
+    .reviews-rating { align-items: flex-start; flex-direction: column; gap: 20px; padding: 26px 0; }
+    .reviews-grid { grid-template-columns: 1fr; gap: 16px; }
+    .review-excerpt { padding: 25px; }
+    .reviews-feedback, .reviews-details { padding-top: 45px; }
+}
