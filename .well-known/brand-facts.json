@@ -14,16 +14,17 @@
     "price": "0",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
-    "description": "Free core app. Optional PushCheck Pro is a one-time purchase for public groups and challenge seasons. Check the in-app purchase screen for the current price in your region."
+    "description": "Free core tracking and Apple Health export. Optional PushCheck Pro is a one-time purchase for plans, workout reports, Apple Watch, private workout places, public groups and challenge seasons. Check the app for your regional price."
   },
   "featureList": [
-    "Friend group challenges and shared daily goals",
-    "Group leaderboards ranked by total reps or streak",
-    "Daily push-up tracking with manual check-ins",
-    "Current streak, best streak, daily average, and all-time totals",
-    "Multiple groups and solo tracking",
-    "Free core app with no ads or subscriptions",
-    "Optional PushCheck Pro for public groups and challenge seasons"
+    "Manual daily push-up check-ins",
+    "Private groups, shared goals, leaderboards and streaks",
+    "Basic timed workouts and optional Apple Health export, free",
+    "Optional Pro four-week push-up plans",
+    "Pro reports for timed workouts saved on this iPhone",
+    "Pro Apple Watch timer and manual reps transferred to iPhone",
+    "Pro private workout-place labels",
+    "Pro public-group participation and publishing, and challenge-season organization"
   ],
   "keywords": [
     "push-up app",
@@ -86,5 +87,5 @@
     "@type": "Person",
     "name": "Jon Allen"
   },
-  "dateModified": "2026-10-16"
+  "dateModified": "2026-11-07"
 }

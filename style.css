@@ -333,3 +333,64 @@ footer { padding: 65px 0 24px; background: var(--bg-dark); border-top: 1px solid
     .review-excerpt { padding: 25px; }
     .reviews-feedback, .reviews-details { padding-top: 45px; }
 }
+
+/* Pro and practical guides, using the existing site palette. */
+.pro-hero { padding: 82px 0 92px; background: var(--bg-dark); overflow: hidden; }
+.pro-hero > .container { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: center; }
+.pro-hero h1 { font: 800 clamp(100px, 12vw, 180px)/.82 var(--display); letter-spacing: -.03em; text-transform: uppercase; margin: 30px 0; }
+.pro-hero h1 span, .pro-number { color: var(--primary); }
+.pro-purchase { font-weight: 650; margin: 28px 0 20px; }
+.pro-hero .small-text { margin-top: 14px; }
+.pro-mark { color: var(--primary); font-size: clamp(220px, 35vw, 460px); font-weight: 700; line-height: 1; transform: rotate(-8deg); text-align: center; }
+.pro-feature-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 40px; margin-top: 48px; }
+.pro-feature-grid article { padding-top: 22px; border-top: 1px solid var(--border); }
+.pro-number { font-size: 12px; letter-spacing: .1em; font-weight: 700; }
+.pro-feature-grid h3, .pro-extras h2 { font: 800 clamp(36px,4vw,58px)/1 var(--display); text-transform: uppercase; margin: 20px 0; }
+.pro-feature-grid p, .pro-extras p { max-width: 45ch; }
+.pro-extras { background: var(--bg-light); padding: 72px 0; }
+.pro-extras > .container { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 90px; }
+.pro-extras .small-text { margin-top: 18px; }
+.pro-free > p { max-width: 70ch; margin-bottom: 20px; }
+.pro-free .small-text { margin-top: 20px; }
+.guide-table-wrap { overflow-x: auto; margin: 28px 0; }
+.guide-table { border-collapse: collapse; width: 100%; font-size: 15px; }
+.guide-table th, .guide-table td { text-align: left; vertical-align: top; padding: 14px; border-bottom: 1px solid var(--border); }
+.guide-table thead { background: var(--bg-light); }
+.guide-table th { font-weight: 650; }
+.challenge-brief { background: var(--bg-light); padding: 26px; margin: 24px 0; }
+.challenge-brief dl { display: grid; grid-template-columns: 120px minmax(0,1fr); gap: 12px 24px; }
+.challenge-brief dt { font-weight: 700; }
+.challenge-brief dd { margin: 0; }
+.current-features { border-left: 3px solid var(--primary); padding: 16px 24px; margin-bottom: 45px; }
+@media (max-width: 760px) {
+    .pro-hero { padding: 50px 0 64px; }
+    .pro-hero > .container { grid-template-columns: minmax(0,1fr); gap: 32px; }
+    .pro-hero h1 { font-size: clamp(90px,21vw,140px); }
+    .pro-mark { display: none; }
+    .pro-feature-grid { grid-template-columns: minmax(0,1fr); gap: 30px; margin-top: 32px; }
+    .pro-extras > .container { grid-template-columns: minmax(0,1fr); gap: 48px; }
+    .pro-extras { padding: 52px 0; }
+    .challenge-brief dl { grid-template-columns: minmax(0,1fr); gap: 4px; }
+    .challenge-brief dd { margin-bottom: 14px; }
+    .guide-table { font-size: 13px; }
+    .guide-table th, .guide-table td { padding: 10px 6px; }
+}
+
+/* Private invitation landing state: no group data is loaded here. */
+.invite-page { min-height: 100vh; }
+.invite-page .brand, .invite-page main, .invite-page footer { width: min(100% - 40px, 470px); margin: 0 auto; }
+.invite-page .brand { padding: 34px 0; }
+.invite-page .brand a { display: flex; gap: 12px; align-items: center; font-size: 24px; font-weight: 750; text-decoration: none; }
+.invite-page .brand-check { color: var(--primary); font-size: 36px; line-height: 1; }
+.invite-page .invite-card { padding: 32px 26px; background: var(--bg-light); border: 1px solid var(--border); border-radius: 24px; }
+.invite-page .eyebrow { color: var(--primary); }
+.invite-page h1 { font-size: clamp(34px,8vw,48px); line-height: 1.08; letter-spacing: -.04em; margin: 24px 0; }
+.invite-page .intro { margin-bottom: 26px; }
+.invite-page .button { display: flex; justify-content: center; align-items: center; width: 100%; min-height: 52px; padding: 12px 18px; border-radius: 14px; font-weight: 700; text-decoration: none; margin-top: 12px; }
+.invite-page .button.primary { background: var(--primary); color: var(--bg-dark); }
+.invite-page .button.secondary { background: var(--card-bg); border: 1px solid var(--border); }
+.invite-page .install-help { font-size: 14px; margin-top: 24px; line-height: 1.6; }
+.invite-page .privacy-note { color: var(--text-light); font-size: 13px; margin: 22px 0; text-align: center; }
+.invite-page footer { background: none; border: 0; padding: 20px 0 40px; font-size: 14px; text-align: center; }
+.invite-page footer a { color: var(--primary); }
+.invite-page [hidden] { display: none; }

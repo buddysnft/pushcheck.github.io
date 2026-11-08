@@ -248,7 +248,12 @@ class Checker:
         ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
         entries = [(n.findtext("s:loc", namespaces=ns), n.findtext("s:lastmod", namespaces=ns))
                    for n in ET.fromstring(sitemap).findall("s:url", ns)]
-        self.check(len(entries) == 7 and len({u for u, _ in entries}) == 7, "Expected seven distinct sitemap pages")
+        expected_routes = {"/", "/faq.html", "/blog.html", "/brand-facts.html",
+                           "/blog/best-push-up-tracker-app", "/blog/push-up-challenge-app-for-friends",
+                           "/reviews.html", "/pro.html", "/guides/push-ups-apple-health.html"}
+        self.check(len(entries) == len(expected_routes) and
+                   {urlsplit(u).path for u, _ in entries} == expected_routes,
+                   "Expected all nine distinct sitemap pages, excluding invitation URLs")
         robots, _ = self.read("/robots.txt")
         policy = RobotFileParser()
         policy.parse(robots.splitlines())

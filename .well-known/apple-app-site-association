@@ -1,0 +1,20 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["Z392BD59QX.com.pushcheck.app"],
+        "components": [
+          {
+            "/": "/join/*",
+            "comment": "Legacy group invitation paths. The app validates the exact six-character invitation."
+          },
+          {
+            "/": "/join.html",
+            "?": { "code": "??????" },
+            "comment": "Group invitations only. The app rejects malformed or ambiguous codes."
+          }
+        ]
+      }
+    ]
+  }
+}
