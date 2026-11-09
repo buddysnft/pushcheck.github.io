@@ -25,6 +25,7 @@ Before publishing a change, run:
 ```bash
 python3 scripts/check_search_readiness.py
 python3 scripts/check_campaign_links.py
+node --test scripts/test_campaign_links.js
 ```
 
 After GitHub Pages finishes building, check the actual responses:
@@ -37,7 +38,9 @@ python3 scripts/check_campaign_links.py --live
 Also follow `site.sh preflight` and `site.sh verify` in `AGENTS.md`. A successful
 push alone does not establish that the new content is live.
 
-App Store links carry page-specific campaign labels. See the
+App Store links carry page-specific campaign labels. A deferred helper can
+select a fixed AI source label for an indicated referral on that landing page,
+without cookies, storage or telemetry requests. See the
 [campaign mapping and verification notes](docs/campaign-links.md).
 
 - Keep public sitemap pages indexable and eligible for search snippets. The

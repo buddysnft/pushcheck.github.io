@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Validate ordinary App Store anchors and optional href-only baseline parity.
+"""Validate static App Store anchors and the optional AI source helper.
 
 Use --live after deployment. Use --compare-ref REF locally to prove that the
-campaign edit preserves page bytes outside App Store hrefs and invitation files.
+campaign edit preserves page bytes outside App Store hrefs and the exact helper
+script inclusion. Invitation files remain unchanged.
 """
 
 import argparse
@@ -19,6 +20,8 @@ from check_search_readiness import Checker, Document
 ROOT = Path(__file__).resolve().parents[1]
 APP_ID = "6759138620"
 PROVIDER = "128550277"
+HELPER_SRC = "/campaign-links.js?v=20261109"
+HELPER_LINE = f'    <script src="{HELPER_SRC}" defer></script>\n'
 CAMPAIGNS = {
     "index.html": ("web_home", 6),
     "pro.html": ("web_pro", 4),
@@ -44,12 +47,12 @@ def campaign_url(campaign):
 
 
 def mask_store_hrefs(html):
-    """Mask only ordinary App Store href values, preserving all other bytes."""
+    """Mask only App Store href values and the exact approved helper inclusion."""
     def replace(match):
         if urlsplit(unescape(match[3])).hostname == "apps.apple.com":
             return match[1] + match[2] + "APP_STORE_HREF" + match[4]
         return match[0]
-    return ANCHOR_HREF.sub(replace, html)
+    return ANCHOR_HREF.sub(replace, html).replace(HELPER_LINE, "", 1)
 
 
 def baseline(ref, path):
@@ -68,6 +71,11 @@ def run(live=False, compare_ref=None):
             route = route.removesuffix(".html")
         html, _ = checker.read(route)
         document = Document(html).root
+        helpers = [node for node in document.find("script")
+                   if urlsplit(node.attrs.get("src", "")).path == "/campaign-links.js"]
+        checker.check(len(helpers) == 1 and helpers[0].attrs == {"src": HELPER_SRC, "defer": None}
+                      and not helpers[0].text(False) and helpers[0].parent.tag == "head",
+                      f"{path}: expected one deferred AI campaign helper in the head")
         anchors = [node for node in document.find("a")
                    if urlsplit(node.attrs.get("href", "")).hostname == "apps.apple.com"]
         checker.check(re.fullmatch(r"web_[a-z0-9_]+", campaign) and len(campaign) <= 30,
@@ -97,9 +105,16 @@ def run(live=False, compare_ref=None):
         if compare_ref:
             previous = baseline(compare_ref, path)
             checker.check(mask_store_hrefs(previous) == mask_store_hrefs(html),
-                          f"{path}: content changed outside ordinary App Store href values")
+                          f"{path}: content changed outside App Store hrefs and the exact helper inclusion")
         total += len(anchors)
         print(f"  {path}: {campaign}, {len(anchors)} anchors")
+    helper, _ = checker.read("/campaign-links.js")
+    checker.check(helper == (ROOT / "campaign-links.js").read_text(encoding="utf-8"),
+                  "campaign-links.js: served helper differs from the checked-out source")
+    join, _ = checker.read("/join.html")
+    checker.check(not any(urlsplit(node.attrs.get("src", "")).path == "/campaign-links.js"
+                          for node in Document(join).root.find("script")),
+                  "join.html: invitation flow must not load the AI campaign helper")
     if not live:
         for path in ROOT.rglob("*.html"):
             relative = path.relative_to(ROOT).as_posix()
@@ -112,12 +127,12 @@ def run(live=False, compare_ref=None):
         for path in PRESERVED:
             checker.check(baseline(compare_ref, path) == (ROOT / path).read_text(encoding="utf-8"),
                           f"{path}: protected file changed from {compare_ref}")
-        print(f"  Baseline {compare_ref}: page bytes outside hrefs and {len(PRESERVED)} protected files checked.")
+        print(f"  Baseline {compare_ref}: page bytes outside hrefs/helper and {len(PRESERVED)} protected files checked.")
     if checker.errors:
         print("FAIL:\n" + "\n".join("  - " + error for error in checker.errors))
         return 1
-    print(f"PASS: {total} ordinary App Store anchors across {len(CAMPAIGNS)} pages.")
-    print("Campaign labels identify website origin; they do not establish AI referrals or conversions.")
+    print(f"PASS: {total} static default App Store anchors across {len(CAMPAIGNS)} pages, plus the deferred helper.")
+    print("Static web campaigns remain verified. AI source markers indicate a source; they do not prove origin or conversions.")
     return 0
 
 
