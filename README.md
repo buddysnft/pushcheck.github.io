@@ -24,16 +24,21 @@ Before publishing a change, run:
 
 ```bash
 python3 scripts/check_search_readiness.py
+python3 scripts/check_campaign_links.py
 ```
 
 After GitHub Pages finishes building, check the actual responses:
 
 ```bash
 python3 scripts/check_search_readiness.py --live
+python3 scripts/check_campaign_links.py --live
 ```
 
 Also follow `site.sh preflight` and `site.sh verify` in `AGENTS.md`. A successful
 push alone does not establish that the new content is live.
+
+App Store links carry page-specific campaign labels. See the
+[campaign mapping and verification notes](docs/campaign-links.md).
 
 - Keep public sitemap pages indexable and eligible for search snippets. The
   custom 404 should remain `noindex` and return HTTP 404.
